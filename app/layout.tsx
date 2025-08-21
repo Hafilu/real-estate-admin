@@ -18,9 +18,14 @@ export default function RootLayout({
       <body>
         <div className="min-h-screen flex text-gray-900 bg-gray-100">
           <Sidebar />
-          <div className="flex-1 min-h-screen max-w-full overflow-hidden">
-            <Navbar />
-            <main className="p-4 md:p-6 ">{children}</main>
+          <div className="flex flex-col h-screen w-full overflow-hidden">
+            {/* Fixed Navbar */}
+            <Navbar  />
+
+            {/* Main content scrolls */}
+            <main className="flex-1 custom p-4 md:p-6   overflow-auto">
+              {children}
+            </main>
           </div>
         </div>
       </body>

@@ -28,3 +28,19 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(100, 116, 139, 0.5) transparent;
 }
+
+/* Remove outline and box-shadow for Recharts wrappers and all their children */
+.recharts-wrapper,
+.recharts-wrapper *,
+.recharts-responsive-container,
+.recharts-responsive-container * {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Also prevent them from being focusable */
+.recharts-wrapper,
+.recharts-responsive-container {
+  pointer-events: auto; /* optional */
+  user-select: none;
+}
